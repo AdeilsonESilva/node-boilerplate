@@ -1,0 +1,10 @@
+{
+  "name": "node-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Adeilson Silva <adeilson@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}
