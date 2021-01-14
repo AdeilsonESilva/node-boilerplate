@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Adeilson Silva <adeilson@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "yarn tsc"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "@typescript-eslint/parser": "^4.13.0",
