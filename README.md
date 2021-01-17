@@ -93,3 +93,4 @@ Onboarding time NodeJs
 8 - Para criar um controller execute o cli do NestJS - nest g controller features/heroes
 9 - Para criar o service execute o cli do NestJS - nest g provider features/heroes/heroes.service
 10 - Para criar um modulo que vai criar um contexto execute o cli do NestJS - nest g module features/heroes
+11 - Para criar uma classe execute o cli do NestJS - nest g class features/shared/hero
