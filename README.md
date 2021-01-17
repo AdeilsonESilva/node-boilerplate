@@ -90,3 +90,6 @@ Onboarding time NodeJs
         [Info  - 15:11:13] ESLint server running in node v12.14.1
         [Info  - 15:11:13] ESLint server is running.
 7 - Instalar global o CLI do NestJS - npm i -g @nestjs/cli
+8 - Para criar um controller execute o cli do NestJS - nest g controller features/heroes
+9 - Para criar o service execute o cli do NestJS - nest g provider features/heroes/heroes.service
+10 - Para criar um modulo que vai criar um contexto execute o cli do NestJS - nest g module features/heroes
