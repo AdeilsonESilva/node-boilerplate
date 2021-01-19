@@ -40,6 +40,7 @@ export class HeroesService {
 
   update(id: string, hero: UpdateHeroRequest): void {
     const heroFound = this.getById(id);
+
     if (!heroFound) {
       throw new NotFoundException('Hero not found');
     }
