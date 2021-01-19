@@ -99,10 +99,10 @@ Nest is [MIT licensed](LICENSE).
 
 7 - Instalar global o CLI do NestJS - npm i -g @nestjs/cli
 
-8 - Para criar um controller execute o cli do NestJS - nest g controller features/heroes
+8 - Para criar um controller execute o cli do NestJS - nest g controller features/heroes renomear para heroes-controller.ts
 
-9 - Para criar o service execute o cli do NestJS - nest g provider features/heroes/heroes.service
+9 - Para criar o service execute o cli do NestJS - nest g provider features/heroes/HeroesService
 
-10 - Para criar um modulo que vai criar um contexto execute o cli do NestJS - nest g module features/heroes
+10 - Para criar um modulo que vai criar um contexto execute o cli do NestJS - nest g module features/heroes renomear para heroes-module.ts
 
-11 - Para criar uma classe execute o cli do NestJS - nest g class features/shared/hero
+11 - Para criar uma classe execute o cli do NestJS - nest g class model/heroes/CreateHeroRequest
