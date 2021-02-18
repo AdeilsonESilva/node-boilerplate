@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  node_postgres:
+    container_name: node_postgres
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      PGDATA: /data/postgres
+    volumes:
+      - node_postgres:/data/postgres
+volumes:
+  node_postgres:
