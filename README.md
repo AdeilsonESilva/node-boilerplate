@@ -110,16 +110,18 @@ Nest is [MIT licensed](LICENSE).
 
 ## KNEX
 
-```bash
+```
 #Inicializar o Knex
 yarn knex init -x ts
 
 #Acertar knexfile.ts
 
-#Criar a migration da tabela heroes
-yarn knex migrate:make create_heroes_table -x ts
+#Criar a migration de uma nova tabela
+yarn knex migrate:make create_your_table -x ts
 
 #Acertar a migration
+O comando make apenas cria um arquivo da migration e usa o timestamp no inicio do nome para ordem de execução das migrations.
+O conteúdo de cada migration fica por conta de cada desenvolvedor configurar.
 
 #Executar migration
 yarn knex migrate:latest
