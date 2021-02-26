@@ -11,6 +11,6 @@ services:
       PGDATA: /data/postgres
     volumes:
       - node_postgres:/data/postgres
-      - ./src/database/schema/schema.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./database/schema/schema.sql:/docker-entrypoint-initdb.d/init.sql
 volumes:
   node_postgres:
