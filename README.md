@@ -111,6 +111,10 @@ Nest is [MIT licensed](LICENSE).
 ## KNEX
 
 ```
+#Limpar o docker, caso necessário
+docker rm $(docker ps -aq)
+docker volume rm $(docker volume ls -q)
+
 #Inicializar o Knex
 yarn knex init -x ts
 
