@@ -1,12 +1,23 @@
 import { race } from 'src/types';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
+@Entity()
 export class Hero {
-  constructor(
-    public id: string,
-    public name: string,
-    public enabled: boolean,
-    public created_at: number,
-    public updated_at: number,
-    public race: race,
-  ) {}
+  @PrimaryGeneratedColumn('uuid')
+  id?: string;
+
+  @Column()
+  name!: string;
+
+  @Column('boolean', { default: true })
+  enabled?: boolean;
+
+  @Column('timestamptz', { default: 'now()' })
+  created_at?: number;
+
+  @Column('timestamptz', { default: 'now()' })
+  updated_at?: number;
+
+  @Column()
+  race!: race;
 }
