@@ -13,7 +13,7 @@ module.exports = {
     max: 10,
   },
   migrations: {
-    directory: path.resolve(__dirname, 'database', 'migrations'),
+    directory: path.resolve(__dirname, 'src', 'database', 'migrations'),
     schemaName: 'heroservice',
   },
 };
