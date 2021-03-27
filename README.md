@@ -106,28 +106,3 @@ Nest is [MIT licensed](LICENSE).
 10 - Para criar um modulo que vai criar um contexto execute o cli do NestJS - nest g module features/heroes renomear para heroes-module.ts
 
 11 - Para criar uma classe execute o cli do NestJS - nest g class model/heroes/CreateHeroRequest
-
-
-## KNEX
-
-```bash
-#Inicializar o Knex
-yarn knex init -x ts
-
-#Acertar knexfile.ts
-
-#Criar a migration da tabela heroes
-yarn knex migrate:make create_heroes_table -x ts
-
-#Acertar a migration
-
-#Executar migration
-yarn knex migrate:latest
-
-#Rollback da migration
-yarn knex migrate:rollback
-```
-
-
-
-
