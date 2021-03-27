@@ -8,8 +8,6 @@ import { HeroesRepository } from './heroes-repository';
 export class HeroesService {
   constructor(private heroesRepository: HeroesRepository) {}
 
-  // heroes: Hero[] = [];
-
   async getAll(): Promise<Hero[]> {
     return await this.heroesRepository.getAll();
   }

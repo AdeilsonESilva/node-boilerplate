@@ -73,6 +73,29 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 Nest is [MIT licensed](LICENSE).
 
 
+## DOCKER
+
+```
+#Limpar o docker, caso necessário
+docker rm $(docker ps -aq)
+docker volume rm $(docker volume ls -q)
+```
+
+
+## TYPEORM
+
+```
+#Criar a migration de uma nova tabela
+yarn typeorm migration:create -n Hero
+
+#Executar migration
+yarn typeorm migration:run
+
+#Rollback da migration
+yarn knex migrate:revert
+```
+
+
 ## Onboarding time NodeJs
 
 1 - Instalar VsCode
