@@ -3,7 +3,6 @@ import {
   Controller,
   Delete,
   Get,
-  HttpCode,
   Param,
   Post,
   Put,
@@ -31,24 +30,33 @@ export class HeroesController {
 
   @Post()
   async create(@Body() hero: CreateHeroRequest, @Res() res: Response) {
-    const id = this.heroesService.create(hero);
+    const id = await this.heroesService.create(hero);
 
     res.set('Location', `/api/heroes/${id}`);
     return res.send();
   }
 
   @Put(':id')
-  @HttpCode(204)
   async update(
     @Param('id') id: string,
     @Body() hero: UpdateHeroRequest,
-  ): Promise<void> {
-    this.heroesService.update(id, hero);
+    @Res() res: Response,
+  ) {
+    try {
+      await this.heroesService.update(id, hero);
+      return res.sendStatus(204);
+    } catch (error) {
+      return res.status(404).send(error);
+    }
   }
 
   @Delete(':id')
-  @HttpCode(204)
-  async delete(@Param('id') id: string): Promise<void> {
-    this.heroesService.delete(id);
+  async delete(@Param('id') id: string, @Res() res: Response) {
+    try {
+      await this.heroesService.delete(id);
+      return res.sendStatus(204);
+    } catch (error) {
+      return res.status(404).send(error);
+    }
   }
 }
