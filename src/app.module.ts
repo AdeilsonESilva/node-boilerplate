@@ -3,22 +3,11 @@ import { AppController } from './app.controller';
 import { HeroesModule } from './features/heroes/v1/heroes-module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
-import { Hero } from './model/heroes/hero';
-
+import ormconfig = require('./config/database/ormconfig');
 @Module({
   imports: [
     HeroesModule,
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: 'postgres',
-      database: 'postgres',
-      entities: [Hero],
-      synchronize: true,
-      schema: 'heroservice',
-    }),
+    TypeOrmModule.forRoot(ormconfig[0]), //default
   ],
   controllers: [AppController],
 })

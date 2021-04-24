@@ -8,8 +8,8 @@
   "entities": [],
   "synchronize": true,
   "schema": "heroservice",
-  "migrations": ["./database/migration/*.ts"],
+  "migrations": ["./docker/database/migration/*.ts"],
   "cli": {
-    "migrationsDir": "./database/migration"
+    "migrationsDir": "./docker/database/migration"
 }
 }
