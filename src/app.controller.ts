@@ -1,10 +1,9 @@
-import { Controller, Get, Res } from '@nestjs/common';
-import { Response } from 'express';
+import { Controller, Get } from '@nestjs/common';
 
 @Controller()
 export class AppController {
   @Get('/health')
-  async healthCheck(@Res() res: Response) {
-    return res.status(200).send('UP');
+  healthCheck() {
+    return 'UP';
   }
 }
